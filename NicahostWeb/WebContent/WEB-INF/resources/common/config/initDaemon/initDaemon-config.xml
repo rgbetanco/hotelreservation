@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	1 sec   =         1,000 (                               1000)
+	1 min   =        60,000 (                       60sec * 1000)
+	1 hour  =     3,600,000 (               60min * 60sec * 1000)
+	1 day   =    86,400,000 (        24hr * 60min * 60sec * 1000)
+	1 week  =   604,800,000 (7day  * 24hr * 60min * 60sec * 1000)
+	1 month = 2,592,000,000 (30day * 24hr * 60min * 60sec * 1000)
+-->
+
+<Daemons>
+	<Daemon name="DeleteTempFiles">
+		<start>true</start>
+		<class-name>com.nicahost.common.daemon.DelTempFileDaemon</class-name>
+		<time>3600000</time>
+		<priority>MIN_PRIORITY</priority>
+		<init-params>
+			<init-param>
+				<param-name>pathToDir</param-name>
+				<param-value>/WEB-INF/temp/</param-value>
+			</init-param>
+			<init-param>
+				<param-name>timeToLive</param-name>
+				<param-value>172800000</param-value>
+			</init-param>
+		</init-params>	
+	</Daemon>
+
+<!-- Modulo de HotelReserve -->
+	<Daemon name="HotelReserveChatServer">
+		<start>true</start>
+		<class-name>com.nicahost.module.hotelreserve.daemon.ChatServerDaemon</class-name>
+		<time>0</time>
+		<priority>NORM_PRIORITY</priority><init-params>
+			<init-param>
+				<param-name>serverConfigFile</param-name>
+				<param-value>/WEB-INF/resources/hotelreserve/config/chat/llamachatconf.xml</param-value>
+			</init-param>
+		</init-params>
+	</Daemon>
+	
+</Daemons>
+
+
+

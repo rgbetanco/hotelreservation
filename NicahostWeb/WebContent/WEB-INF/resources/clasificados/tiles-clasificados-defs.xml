@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE component-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" 
+								"http://jakarta.apche.org/struts/dtds/tiles-config_1_1.dtd" >
+<component-definitions>
+	<!-- Home layout -->
+  <definition name="homePage" path="/jsp/classified/layouts/defaultLayout.jsp">
+	<put name="header.layout" value="home.layout.header" />
+	<put name="sub-header.layout" value = "/jsp/classified/common/homeSubHeader.jsp" />
+	<put name="left.layout" value = "home.leftmenu.layout" />
+	<put name="body-content" value = "/jsp/classified/common/homeBody.jsp" />
+	<!-- right-layout -->
+	<put name="footer.layout" value="common.layout.footer" />	
+  </definition>
+  <definition name="home.layout.header" path="/jsp/classified/layouts/headerLayout.jsp" >
+  	<put name="commonHeader" value="/jsp/classified/common/homeHeader.jsp" />
+  </definition>	  
+  <definition name="home.layout.body" path="/jsp/classified/layouts/homeBodyLayout.jsp" >
+  	<put name="nav1" value="/jsp/classified/common/homeBody.jsp" />
+  </definition>	
+  <definition name="home.leftmenu.layout" path="/jsp/classified/layouts/leftLayout.jsp">
+  	<put name="nav1" value="/jsp/classified/common/shoppingCartSmallMenu.jsp" />
+	<put name="nav2" value="/jsp/classified/common/categoryMenu.jsp" />  	
+  	<put name="nav3" value="/jsp/classified/common/adGoogleVertical.jsp" />
+  	
+  </definition>
+
+
+
+
+  <definition name="default" path="/jsp/classified/layouts/defaultLayout.jsp" >
+  	<put name="header.layout" value="common.layout.header" />
+  	<!-- sub-header.layout-->
+  	<!-- left.layout -->
+  	<!-- body-content -->
+  	<!-- right-layout -->
+  	<put name="footer.layout" value="common.layout.footer" />
+
+  </definition>
+
+  <definition name="common.layout.header" path="/jsp/classified/layouts/headerLayout.jsp" >
+  	<put name="commonHeader" value="/jsp/classified/common/header.jsp" />
+  </definition>
+
+  <definition name="common.layout.footer" path="/jsp/classified/layouts/footerLayout.jsp" >
+  	<put name="commonFooter" value="/jsp/classified/common/footer.jsp" />
+  </definition>
+
+  <definition name="error.layout" extends="default" >  	
+  	<put name="body-content" value="/jsp/classified/common/error.jsp" />
+  </definition>   
+
+  <definition name="clasificados.home.layout" extends="default">
+    <put name="sub-header.layout" value = "/jsp/classified/subHeaderHome.jsp" />
+  	<put name="body-content" value="/jsp/classified/clasificadosHome.jsp" />
+  </definition>
+
+  <definition name="clasificados.result.layout" extends="default">
+  	<put name="left.layout" value="clasificados.result.leftmenu.layout" />
+  	<put name="body-content" value="/jsp/classified/result.jsp" />
+  </definition>
+
+  <definition name="clasificados.resultSearch.layout" extends="default">
+  	<put name="left.layout" value="clasificados.result.leftmenu.layout" />
+  	<put name="body-content" value="/jsp/classified/resultSearch.jsp" />
+  </definition>
+    
+  <definition name="clasificados.result.leftmenu.layout" path="/jsp/classified/layouts/leftLayout.jsp">
+  	<put name="nav1" value="/jsp/classified/common/shoppingCartSmallMenu.jsp" />
+  	<put name="nav2" value="/jsp/classified/common/categoryMenu.jsp" />
+  	<put name="nav3" value="/jsp/classified/common/importantMenu.jsp" />
+  	
+  </definition>
+  
+  <definition name="clasificados.orderpage.layout" extends="default">
+  	<put name="body-content" value="/jsp/classified/orderPage.jsp" />
+  </definition>
+
+  <definition name="clasificados.signin.layout" extends="default">
+  	<put name="body-content" value="/jsp/classified/signIn.jsp" />
+  </definition>
+
+  <definition name="clasificados.newaccount.layout" extends="default">
+  	<put name="body-content" value="/jsp/classified/newAccount.jsp" />
+  </definition>
+  	<!-- new add -->
+  <definition name="newAdDefault" path="/jsp/classified/layouts/defaultLayout.jsp" >
+  	<put name="header.layout" value="/jsp/classified/common/newAdHeader.jsp" />
+  	<!-- sub-header.layout-->
+  	<!-- left.layout -->
+  	<!-- body-content -->
+  	<!-- right-layout -->
+  	<put name="footer.layout" value="common.layout.footer" />
+  </definition>	
+
+  <definition name="clasificados.anunciese.layout" extends="newAdDefault">
+  	<put name="body-content" value="/jsp/classified/anuncieseFormat.jsp" />
+  </definition>
+
+  <definition name="clasificados.newadd.layout" extends="newAdDefault">
+  	<put name="body-content" value="/jsp/classified/anuncieseInput.jsp" />
+  </definition>
+    
+  <definition name="clasificados.confirmnewadd.layout" extends="newAdDefault">
+  	<put name="body-content" value="/jsp/classified/confirmNewAd.jsp" />
+  </definition>
+
+  <definition name="clasificados.thankyou.layout" extends="newAdDefault">
+  	<put name="body-content" value="/jsp/classified/thankYou.jsp" />
+  </definition>
+  
+
+	<!-- Checkout -->
+  <definition name="checkoutDefault" path="/jsp/classified/layouts/defaultLayout.jsp" >
+  	<!-- header.layout MUST BE DEFINED -->
+  	<!-- sub-header.layout-->
+  	<!-- left.layout -->
+  	<!-- body-content -->
+  	<!-- right-layout -->
+  	<put name="footer.layout" value="common.layout.footer" />
+  </definition>	
+  
+  <definition name="checkout.signin.layout" extends="checkoutDefault" >
+  	<put name="header.layout" value="/jsp/classified/signInCheckoutHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/signInCheckout.jsp" />
+  </definition>
+
+  <definition name="checkout.shippingaddress.layout" extends="checkoutDefault" >
+  	<put name="header.layout" value="/jsp/classified/shippingAddressHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/shippingAddress.jsp" />
+  </definition>  
+
+  <definition name="checkout.paymentinfo.layout" extends="checkoutDefault" >
+  	<put name="header.layout" value="/jsp/classified/shippingAddressHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/paymentInfo.jsp" />
+  </definition> 
+
+ <definition name="checkout.shippingoption.layout" extends="checkoutDefault" >
+  	<put name="header.layout" value="/jsp/classified/shippingAddressHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/shippingOptions.jsp" />
+  </definition> 
+
+  <definition name="checkout.placeorder.layout" extends="checkoutDefault" >
+  	<put name="header.layout" value="/jsp/classified/placeOrderHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/placeOrder.jsp" />
+  </definition> 
+
+  <definition name="checkout.changequantity.layout" extends="checkoutDefault" >
+  	<put name="header.layout" value="/jsp/classified/placeOrderHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/orderPage.jsp" />
+  </definition> 
+
+  <definition name="clasificados.sendemail.layout" extends="newAdDefault">
+  	<put name="body-content" value="/jsp/classified/sendEmail.jsp" />
+  </definition>
+
+  <definition name="clasificados.sendemail.success" extends="newAdDefault">
+  	<put name="body-content" value="/jsp/classified/sendEmailOK.jsp" />
+  </definition>
+
+	<!-- New Seller Account -->
+  <definition name="sellerAccountDefault" path="/jsp/classified/layouts/defaultLayout.jsp" >
+  	<!-- header.layout MUST BE DEFINED -->
+  	<!-- sub-header.layout-->
+  	<!-- left.layout -->
+  	<!-- body-content -->
+  	<!-- right-layout -->
+  	<put name="footer.layout" value="common.layout.footer" />
+  </definition>	
+
+ <definition name="sellonline.signin.layout" extends="sellerAccountDefault" >
+  	<put name="header.layout" value="/jsp/classified/common/newAdHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/signInSellerOnline.jsp" />
+  </definition> 
+
+ <definition name="newselleraccount.intro.layout" extends="sellerAccountDefault" >
+  	<put name="header.layout" value="/jsp/classified/newSellerAccountIntroHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/newSellerAccountIntro.jsp" />
+  </definition> 
+
+ <definition name="newselleraccount.creditcard.layout" extends="sellerAccountDefault" >
+  	<put name="header.layout" value="/jsp/classified/newSellerAccountCreditCardHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/newSellerAccountCreditCard.jsp" />
+ </definition> 
+
+ <definition name="newselleraccount.bankaccount.layout" extends="sellerAccountDefault" >
+  	<put name="header.layout" value="/jsp/classified/newSellerAccountBankAccountHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/newSellerAccountBankAccount.jsp" />
+ </definition> 
+
+ <definition name="newselleraccount.sellingfee.layout" extends="sellerAccountDefault" >
+  	<put name="header.layout" value="/jsp/classified/newSellerAccountSellingFeeHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/newSellerAccountSellingFee.jsp" />
+ </definition> 
+
+ <definition name="newselleraccount.agree.layout" extends="sellerAccountDefault" >
+  	<put name="header.layout" value="/jsp/classified/newSellerAccountAgreementHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/newSellerAccountAgreement.jsp" />
+ </definition> 
+
+ <definition name="newselleraccount.add.layout" extends="sellerAccountDefault" >
+  	<put name="header.layout" value="/jsp/classified/newSellerAccountAgreementHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/sendEmailOK.jsp" />
+ </definition> 
+
+ <definition name="newselleraccount.activate.layout" extends="sellerAccountDefault" >
+  	<put name="header.layout" value="/jsp/classified/newSellerAccountAgreementHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/activateSuccess.jsp" />
+ </definition> 
+ <definition name="newselleraccount.activateFailure.layout" extends="sellerAccountDefault" >
+  	<put name="header.layout" value="/jsp/classified/newSellerAccountAgreementHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/activateFailure.jsp" />
+ </definition> 
+
+	<!-- Sell your item -->
+  <definition name="sellItemDefault" path="/jsp/classified/layouts/defaultLayout.jsp" >
+  	<!-- header.layout MUST BE DEFINED -->
+  	<!-- sub-header.layout-->
+  	<!-- left.layout -->
+  	<!-- body-content -->
+  	<!-- right-layout -->
+  	<put name="footer.layout" value="common.layout.footer" />
+  </definition>	
+ <definition name="sellitem.categories.layout" extends="sellItemDefault" >
+  	<put name="header.layout" value="/jsp/classified/sellItemCategoriesHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/sellItemCategories.jsp" />
+ </definition> 
+ <definition name="sellitem.describe.layout" extends="sellItemDefault" >
+  	<put name="header.layout" value="/jsp/classified/sellItemDescribeHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/sellItemDescribe.jsp" />
+ </definition> 
+ <definition name="sellitem.images.layout" extends="sellItemDefault" >
+  	<put name="header.layout" value="/jsp/classified/sellItemImagesHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/sellItemImages.jsp" />
+ </definition>  
+ <definition name="sellitem.payment.layout" extends="sellItemDefault" >
+  	<put name="header.layout" value="/jsp/classified/sellItemPaymentHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/sellItemPayment.jsp" />
+ </definition> 
+ <definition name="sellitem.confirm.layout" extends="sellItemDefault" >
+  	<put name="header.layout" value="/jsp/classified/sellItemConfirmHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/sellItemConfirm.jsp" />
+ </definition> 
+
+	<!-- Change Password -->
+  <definition name="changePasswordDefault" path="/jsp/classified/layouts/defaultLayout.jsp" >
+  	<!-- header.layout MUST BE DEFINED -->
+  	<!-- sub-header.layout-->
+  	<!-- left.layout -->
+  	<!-- body-content -->
+  	<!-- right-layout -->
+  	<put name="footer.layout" value="common.layout.footer" />
+  </definition>	
+ <definition name="changepassword.showinput.layout" extends="changePasswordDefault" >
+  	<put name="header.layout" value="/jsp/classified/changePasswordHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/changePassword.jsp" />
+ </definition> 
+ <definition name="changepassword.showok.layout" extends="changePasswordDefault" >
+  	<put name="header.layout" value="/jsp/classified/changePasswordHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/changePasswordOK.jsp" />
+ </definition> 
+ <definition name="changepassword.showforgot.layout" extends="changePasswordDefault" >
+  	<put name="header.layout" value="/jsp/classified/changePasswordHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/forgotPassword.jsp" />
+ </definition> 
+ <definition name="changepassword.showforgotok.layout" extends="changePasswordDefault" >
+  	<put name="header.layout" value="/jsp/classified/changePasswordHeader.jsp" />
+	<put name="body-content" value="/jsp/classified/forgotPasswordOK.jsp" />
+ </definition> 
+ 
+ 	
+</component-definitions>

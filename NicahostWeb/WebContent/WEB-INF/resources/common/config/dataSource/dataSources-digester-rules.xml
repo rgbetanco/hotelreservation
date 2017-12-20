@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Digester rules for the DataSources file.
+jvillalobos. 07-09-2004
+-->
+<digester-rules>
+	<object-create-rule pattern="Datasources" classname="com.nicahost.common.config.bean.DataSourceArrayBean" />
+   
+   	<pattern value="Datasources/Datasource">
+   		<object-create-rule classname="com.nicahost.common.config.bean.DataSourceBean" />
+   		
+		<set-properties-rule>
+			<alias attr-name="application" prop-name="application" />
+		</set-properties-rule>    
+
+		<call-method-rule pattern="name" methodname="setName" paramcount="0" />
+		<call-method-rule pattern="jndi" methodname="setJndi" paramcount="0" />
+		
+		<set-next-rule methodname="addDataSourceBean" />
+	</pattern>
+</digester-rules>

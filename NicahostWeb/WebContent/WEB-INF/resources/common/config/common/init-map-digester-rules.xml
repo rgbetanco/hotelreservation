@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE digester-rules PUBLIC "-//Jakarta Apache //DTD digester-rules XML V1.0//EN"
+		 "http://jakarta.apache.org/commons/digester/dtds/digester-rules.dtd">
+<!--
+Reglas de Digester para los archivos de inicialización que se parsean como un mapa.
+jvillalobos. 17-11-2004
+-->
+<digester-rules>
+	<object-create-rule pattern="init-params" classname="com.nicahost.common.config.bean.InitParameterMapBean" />
+   
+   	<pattern value="init-params/init-param">
+		<call-method-rule methodname="addParameter" paramcount="2" />
+		<call-param-rule pattern="param-name" paramnumber="0" />
+		<call-param-rule pattern="param-value" paramnumber="1" />
+	</pattern>
+</digester-rules>

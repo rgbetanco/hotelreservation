@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<!-- Data Sources -->
+	<data-sources>
+	</data-sources>
+
+	<!-- Form Beans -->
+	<form-beans>
+		<form-bean name="searchForm" type="com.nicahost.module.classified.form.SearchForm">
+		</form-bean>
+		<form-bean name="newAdForm" type="com.nicahost.module.classified.form.NewAdForm">
+		</form-bean>
+		<form-bean name="signInForm" type="com.nicahost.module.classified.form.SignInForm">
+		</form-bean>		
+		<form-bean name="newAccountForm" type="com.nicahost.module.classified.form.NewAccountForm">
+		</form-bean>
+		<form-bean name="emailForm" type="com.nicahost.module.classified.form.EmailForm">
+		</form-bean>		
+		<form-bean name="changePwdForm" type="com.nicahost.module.classified.form.ChangePwdForm">
+		</form-bean>		
+		<form-bean name="forgotPwdForm" type="com.nicahost.module.classified.form.ForgotPwdForm">
+		</form-bean>			
+		<form-bean name="checkoutForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="address" type="java.lang.String" />
+			<form-property name="city" type="java.lang.String" />
+			<form-property name="state" type="java.lang.String" />
+			<form-property name="zip" type="java.lang.String" />
+			<form-property name="phone" type="java.lang.String" />
+			<form-property name="country" type="java.lang.String" />
+			<form-property name="cardType" type="java.lang.String" />
+			<form-property name="cardNumber" type="java.lang.String" />
+			<form-property name="cardMonth" type="java.lang.String" />
+			<form-property name="cardYear" type="java.lang.String" />
+			<form-property name="cardName" type="java.lang.String" />
+			<form-property name="shippingOption" type="java.lang.String" initial="5.99"/>
+			<form-property name="userName" type="java.lang.String" />
+			<form-property name="email" type="java.lang.String" />
+			<form-property name="password" type="java.lang.String" />
+			<form-property name="comfirmpwd" type="java.lang.String" />
+		</form-bean>
+		
+		<form-bean name="anuncieseForm" type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="title" type="java.lang.String" />
+			<form-property name="desc" type="java.lang.String" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="phone" type="java.lang.String" />
+			<form-property name="email" type="java.lang.String" />
+			<form-property name="category" type="java.lang.String" />			
+			<form-property name="price" type="java.lang.String" />			
+			<form-property name="duration" type="java.lang.String" />
+			<form-property name="currency" type="java.lang.String" initial="USD"/>			
+			<form-property name="myFile" type="org.apache.struts.upload.FormFile" />
+			<form-property name="myFileName" type="java.lang.String" />
+			<form-property name="hideEmail" type="java.lang.String" />
+		</form-bean>
+
+		<form-bean name="newSellerAccountForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="cardId" type="java.lang.String" />
+			<form-property name="cardType" type="java.lang.String" />
+			<form-property name="cardNumber" type="java.lang.String" />
+			<form-property name="cardMonth" type="java.lang.String" />
+			<form-property name="cardYear" type="java.lang.String" />
+			<form-property name="cardName" type="java.lang.String" />
+			<form-property name="cardCCV" type="java.lang.String" />
+			<form-property name="bankAccountHolder" type="java.lang.String" />
+			<form-property name="bankName" type="java.lang.String" />
+			<form-property name="bankAccount" type="java.lang.String" />
+			<form-property name="sellingFee" type="java.lang.String" initial="1" />
+			<form-property name="Iagree" type="java.lang.String" initial=""/>
+		</form-bean>
+		<form-bean name="sellItemForm" type="org.apache.struts.validator.DynaValidatorActionForm">
+			<form-property name="categoryName" type="java.lang.String" initial="4"/>
+			<form-property name="subCategoryName" type="java.lang.String"/>
+			
+			<form-property name="title" type="java.lang.String"/>
+			<form-property name="description" type="java.lang.String"/>
+			<form-property name="price" type="java.lang.String" />			
+			<form-property name="condition" type="java.lang.String" />
+			<form-property name="duration" type="java.lang.String" />
+			<form-property name="currency" type="java.lang.String" initial="USD"/>			
+			<form-property name="quantity" type="java.lang.String"/>
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="address" type="java.lang.String" />
+			<form-property name="city" type="java.lang.String" />
+			<form-property name="state" type="java.lang.String" />
+			<form-property name="zip" type="java.lang.String" />
+			<form-property name="phone" type="java.lang.String" />
+			<form-property name="country" type="java.lang.String" />
+			
+			<form-property name="myFile1" type="org.apache.struts.upload.FormFile" />
+			<form-property name="myFile1Name" type="java.lang.String" />
+			<form-property name="myFile2" type="org.apache.struts.upload.FormFile" />
+			<form-property name="myFile2Name" type="java.lang.String" />
+			<form-property name="myFile3" type="org.apache.struts.upload.FormFile" />
+			<form-property name="myFile3Name" type="java.lang.String" />
+			<form-property name="showNew" type="java.lang.String" />
+
+			<form-property name="shipLocation" type="java.lang.String" />
+			<form-property name="states" type="java.lang.String[]" />				
+			<form-property name="regions" type="java.lang.String[]" />
+			<form-property name="localShippingMethod1" type="java.lang.String" />
+			<form-property name="localShippingPrice1" type="java.lang.String" />
+			<form-property name="localShippingCurrency1" type="java.lang.String" />
+			<form-property name="localShippingMethod2" type="java.lang.String" />
+			<form-property name="localShippingPrice2" type="java.lang.String" />
+			<form-property name="localShippingCurrency2" type="java.lang.String" />
+			<form-property name="localShippingMethod3" type="java.lang.String" />
+			<form-property name="localShippingPrice3" type="java.lang.String" />
+			<form-property name="localShippingCurrency3" type="java.lang.String" />
+			<form-property name="localShippingTime" type="java.lang.String" />			
+			<form-property name="destinationCountry1" type="java.lang.String" />
+			<form-property name="destinationRegion1" type="java.lang.String" />			
+			<form-property name="destinationStates1" type="java.lang.String[]" />						
+			<form-property name="destinationPrice1" type="java.lang.String" />						
+		</form-bean>
+
+
+	</form-beans>
+
+	<!-- Global Exceptions -->
+	<global-exceptions>
+	</global-exceptions>
+
+	<!-- Global Forwards -->
+	<global-forwards>
+		<forward name="GeneralError" path="/showError.do" />
+		<forward name="SessionTimedOut" path="/showSignin.do" />
+		<forward name="ChangePassword" path="/showchangepwd.do"/>
+	</global-forwards>
+
+	<!-- Action Mappings -->
+	<action-mappings>
+
+		<action path="/showError" type="com.nicahost.framework.common.action.ShowErrorAction" name="errorForm" scope="request" validate="false">
+			<forward name="Success" path="error.layout" contextRelative="true">
+			</forward>
+		</action>	
+
+		<action path="/showchangepwd" 
+				type="org.apache.struts.actions.ForwardAction"
+				name="changePwdForm" 
+				scope="request" 
+				validate="false"
+				parameter="changepassword.showinput.layout">
+		</action>		
+		<action path="/changepwd" 
+				type="com.nicahost.module.classified.action.ChangePasswordAction" 
+				name="changePwdForm" 
+				input="/showchangepwd.do"
+				scope="request" 
+				validate="true">
+			<forward name="Success" path="changepassword.showok.layout" contextRelative="true" />			
+		</action>			
+		<action path="/showforgotpwd" 
+				type="org.apache.struts.actions.ForwardAction"
+				name="forgotPwdForm" 
+				scope="request" 
+				validate="false"
+				parameter="changepassword.showforgot.layout">
+		</action>		
+		<action path="/forgotpwd" 
+				type="com.nicahost.module.classified.action.ForgotPasswordAction" 
+				name="forgotPwdForm" 
+				input="/showforgotpwd.do"
+				scope="request" 
+				validate="true">
+			<forward name="Success" path="changepassword.showforgotok.layout" contextRelative="true" />			
+		</action>			
+		
+		
+	
+		<!-- Anunciese -->
+		<action path="/anuncieseformat" 
+				type="org.apache.struts.actions.ForwardAction"
+				parameter="clasificados.anunciese.layout">
+		</action>	
+
+		<action path="/anuncieseoption"
+				type="com.nicahost.module.classified.action.AnuncieseOptionDispatchAction"
+				parameter="formatOption">
+				<forward name="Success1" path="clasificados.newadd.layout" contextRelative="true" />				
+				<forward name="Success2" path="/showsigninselleronline.do" />
+
+				<forward name="NewSellerAccount" path="newselleraccount.intro.layout" contextRelative="true"/>
+				<forward name="SellItem" path="/sellitemcategories.do" redirect="true"/>				
+				
+				<forward name="Failure" path="/anuncieseformat.do" />				
+		</action>			
+		
+		<action path="/anuncieseinput" 
+				type="com.nicahost.module.classified.action.GetCategoryAction" 
+				name="anuncieseForm" 
+				validate="false" 
+				scope="request">
+			<forward name="Success" path="clasificados.newadd.layout" contextRelative="true" />
+
+		</action>
+		<action path="/anuncieseconfirmation" 
+				type="com.nicahost.module.classified.action.UploadFileAction" 
+				input="/anuncieseinput.do" 
+				name="anuncieseForm" 
+				scope="request" 				
+				validate="true">
+				<forward name="Success" path="clasificados.confirmnewadd.layout" redirect="true" />
+		</action>
+		
+		<action path="/anunciese"
+				type="com.nicahost.module.classified.action.AnuncieseDispatchAction"
+				name="anuncieseForm"
+				input="/anuncieseinput.do"
+				validate="false"
+				scope="request"
+				parameter="dispatch">
+
+				<forward name="Success2" path="clasificados.thankyou.layout" contextRelative="true" />				
+				<forward name="Success3" path="/anuncieseinput.do" />
+		</action>
+		
+		
+		
+		<action path="/search" 
+				type="com.nicahost.module.classified.action.SearchAction" name="searchForm" scope="request">
+			<forward name="Success" path="clasificados.resultSearch.layout" contextRelative="true" />
+
+		</action>
+		<action path="/browse" 
+				type="com.nicahost.module.classified.action.BrowseAction" 
+				name="searchForm" 
+				input="/default.do"
+				scope="session" 
+				validate="true">
+
+			<forward name="Success" path="clasificados.result.layout" contextRelative="true" />			
+			<forward name="Failure" path="/default.do" />
+		</action>
+		
+		<action path="/default" type="com.nicahost.module.classified.action.GetCategoryAction">
+			<forward name="Success" path="homePage" contextRelative="false"/>
+		</action>
+
+		<!-- SIGN OUT -->
+		<action path="/signout"	
+				type="com.nicahost.module.classified.action.LogoutAction">
+				<forward name="Success" path="/default.do" redirect="true"/>
+		</action>
+		
+		<!--  SIGN IN -->
+		<action path="/showSignin" 
+				type="org.apache.struts.actions.ForwardAction"
+				name="signInForm" 
+				scope="request" 
+				validate="false"
+				parameter="clasificados.signin.layout">
+		</action>		
+
+		<action path="/signin"	
+				type="com.nicahost.module.classified.action.LoginAction"
+				input="/showSignin.do"
+				name="signInForm"				
+				scope="request"
+				validate="true">
+				<forward name="Success" path="/default.do" redirect="true"/>
+		</action>
+		
+
+		<action path="/createAccount" 
+				type="org.apache.struts.actions.ForwardAction" 				
+				name="newAccountForm" 
+				scope="request" 
+				validate="false"
+				parameter="clasificados.newaccount.layout" >				
+		</action>
+		
+		<action path="/sendemailform"
+				type="org.apache.struts.actions.ForwardAction"
+				name="emailForm"
+				scope="request"
+				validate="false"
+				parameter="clasificados.sendemail.layout"> 
+		</action>
+		<action path="/sendemail"
+				type="com.nicahost.module.classified.action.SendEmailAction"
+				name="emailForm"
+				scope="request"
+				validate="true"
+				input="/sendemailform.do">
+			<forward name="Success" path="clasificados.sendemail.success" />
+		</action>
+		
+		<action path="/newAccount" 
+				type="com.nicahost.module.classified.action.NewAccountAction" 
+				name="newAccountForm" 
+				scope="request" 
+				validate="true"
+				input="/createAccount.do">
+			<forward name="Success" path="/default.do"  redirect="true"/>
+			<forward name="ToShippingAddress" path="/shippingaddress.do" />
+			<forward name="NewSellerAccount" path="newselleraccount.intro.layout" contextRelative="true"/>
+		</action>		
+
+		<action path="/orderPage" type="com.nicahost.module.classified.action.OrderPageAction">
+			<forward name="Success" path="clasificados.orderpage.layout" contextRelative="false"/>
+			<forward name="Success1" path="checkout.changequantity.layout" contextRelative="true" />
+
+		</action>
+
+		<!-- Empieza proceso de checkout-->		
+		<action path="/checkout" 
+				type="org.apache.struts.actions.ForwardAction" 
+				name="checkoutForm" 
+				scope="session" 
+				parameter="checkout.signin.layout"
+				validate="false">
+		</action>		
+		<action path="/shippingaddress" 
+				type="org.apache.struts.actions.ForwardAction" 
+				input="/jsp/classified/signInCheckout.jsp" 
+				parameter="checkout.shippingaddress.layout" 
+				name="checkoutForm" 
+				scope="session" 
+				validate="false">
+		</action>
+		<action path="/paymentinfo" 
+				type="com.nicahost.module.classified.action.PaymentInfoAction" 
+				input="/shippingaddress.do" 
+				name="checkoutForm" 
+				scope="session" 
+				validate="true">
+			<forward name="Success" path="checkout.paymentinfo.layout" contextRelative="true">
+			</forward>
+		</action>
+		
+		<action path="/shippingoption"
+				type="org.apache.struts.actions.ForwardAction"
+				parameter="checkout.shippingoption.layout"
+				input="/paymentinfo.do"
+				name="checkoutForm"
+				scope="session"
+				validate="true">
+		
+		</action>
+		
+		<action path="/placeorder" 
+				type="org.apache.struts.actions.ForwardAction" 				
+				parameter="checkout.placeorder.layout" 
+				input="/shippingoption.do"
+				name="checkoutForm" 
+				scope="session" 
+				validate="true">
+		</action>
+		
+		<action path="/fastcheckoutlogin"	
+				type="com.nicahost.module.classified.action.FastCheckoutLoginAction"
+				input="/checkout.do"
+				name="checkoutForm"				
+				scope="session"
+				validate="true">
+				<forward name="Success" path="/placeorder.do" />
+				<forward name="FailureShippingAddress" path="/shippingaddress.do"/>
+				<forward name="FailurePaymentInfo" path="/paymentinfo.do"/>
+				<forward name="FailureCartEmpty" path="/orderPage.do" />
+		</action>
+	
+		<!-- New Seller Account -->
+		<action path="/showsigninselleronline" 
+				type="org.apache.struts.actions.ForwardAction"
+				name="signInForm" 
+				scope="request" 
+				validate="false"
+				parameter="sellonline.signin.layout">
+		</action>		
+		<action path="/signinselleronline"	
+				type="com.nicahost.module.classified.action.LoginAction"
+				input="/showsigninselleronline.do"
+				name="signInForm"				
+				scope="request"
+				validate="true">
+				<forward name="Success" path="/default.do" redirect="true"/>
+				<forward name="NewSellerAccount" path="newselleraccount.intro.layout" contextRelative="true"/>
+				<forward name="SellItem" path="/sellitemcategories.do" redirect="true"/>
+		</action>		
+		<action path="/selleronlinecreditcard" 
+				type="com.nicahost.module.classified.action.PaymentInfoAction" 
+				name="newSellerAccountForm" 
+				scope="session" 
+				validate="false">
+			<forward name="Success" path="newselleraccount.creditcard.layout" contextRelative="true" />
+		</action>
+		<action path="/selleronlinebank" 
+				type="com.nicahost.module.classified.action.BankNameAction" 
+				name="newSellerAccountForm" 
+				input="/selleronlinecreditcard.do"
+				scope="session" 
+				validate="true">
+			<forward name="Success" path="newselleraccount.bankaccount.layout" contextRelative="true" />
+		</action>
+		<action path="/selleronlinesellingfee" 
+				type="org.apache.struts.actions.ForwardAction" 
+				parameter="newselleraccount.sellingfee.layout"
+				name="newSellerAccountForm" 
+				input="/selleronlinebank.do"
+				scope="session" 
+				validate="true">
+		</action>		
+		<action path="/selleronlineagree" 
+				type="org.apache.struts.actions.ForwardAction" 
+				parameter="newselleraccount.agree.layout"
+				name="newSellerAccountForm" 
+				input="/selleronlinesellingfee.do"
+				scope="session" 
+				validate="true">
+		</action>		
+		<action path="/selleronlineadd"
+				type="com.nicahost.module.classified.action.NewSellerAccountAction"
+				input="/selleronlineagree.do"
+				name="newSellerAccountForm"
+				scope="session"
+				validate="true">
+			<forward name="Success" path="newselleraccount.add.layout" contextRelative="true" />			
+		</action>
+		<action path="/activateselleraccount"
+				type="com.nicahost.module.classified.action.ActivateSellerAccount">
+			<forward name="Success" path="newselleraccount.activate.layout" contextRelative="true"/>
+			<forward name="Failure" path="newselleraccount.activateFailure.layout" contextRelative="true"/>
+		</action>
+		
+		<!-- Sell your item -->
+		<action path="/sellitemcategories" 
+				type="com.nicahost.module.classified.action.GetCategoryAction"
+				name="sellItemForm" 
+				validate="false" 
+				scope="request">				
+			<forward name="Success" path="sellitem.categories.layout" contextRelative="true" />
+		</action>
+		<action path="/sellitemdescribe" 
+				type="org.apache.struts.actions.ForwardAction" 
+				parameter="sellitem.describe.layout"
+				name="sellItemForm" 
+				input="/sellitemcategories.do"
+				scope="session" 
+				validate="true">
+		</action>		
+		<action path="/sellitemimages" 
+				type="org.apache.struts.actions.ForwardAction" 
+				parameter="sellitem.images.layout"
+				name="sellItemForm" 
+				input="/sellitemdescribe.do"
+				scope="session" 
+				validate="true">
+		</action>				
+		<action path="/sellitempayment" 
+				type="com.nicahost.module.classified.action.GetCountryAction" 				
+				name="sellItemForm" 
+				input="/sellitemimages.do"
+				scope="session" 
+				validate="true">
+			<forward name="Success" path="sellitem.payment.layout" contextRelative="true" />				
+		</action>			
+		<action path="/sellitemconfirm" 
+				type="org.apache.struts.actions.ForwardAction" 
+				parameter="sellitem.confirm.layout"
+				name="sellItemForm" 
+				input="/sellitempayment.do"
+				scope="session" 
+				validate="true">
+							
+		</action>
+		
+						
+	</action-mappings>
+
+	<message-resources parameter="com.nicahost.module.classified.resource.ClassifiedMessageResource" /> 
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/resources/clasificados/tiles-clasificados-defs.xml"/>
+		<set-property property="moduleAware" value="true"/>
+		<set-property property="definitions-debug" value="2"/>
+		<set-property property="definitions-parser-details" value="2"/>
+		<set-property property="definitions-parser-validate" value="true"/>
+	</plug-in> 
+
+      <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/resources/framework/validator-rules.xml,/WEB-INF/resources/clasificados/validation.xml"/>
+      </plug-in>
+
+</struts-config>

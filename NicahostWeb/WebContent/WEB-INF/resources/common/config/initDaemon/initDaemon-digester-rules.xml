@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<digester-rules>
+	<object-create-rule pattern="Daemons" classname="com.nicahost.common.config.bean.DaemonArrayBean" />
+   
+   	<pattern value="Daemons/Daemon">
+   		<object-create-rule classname="com.nicahost.common.config.bean.DaemonBean" />
+   		
+		<set-properties-rule>
+			<alias attr-name="name" prop-name="daemonName" />
+		</set-properties-rule>    
+
+		<call-method-rule pattern="class-name" methodname="setDaemonClass" paramcount="0" />
+		<call-method-rule pattern="priority" methodname="setPriority" paramcount="0" />
+		<call-method-rule pattern="time" methodname="setTime" paramcount="0" />
+		<call-method-rule pattern="start" methodname="setStart" paramcount="0" />
+		
+   	<pattern value="init-params">
+   		<object-create-rule classname="java.util.HashMap" />
+   
+	   	<pattern value="init-param">
+			<call-method-rule methodname="put" paramcount="2" />
+			<call-param-rule pattern="param-name" paramnumber="0" />
+			<call-param-rule pattern="param-value" paramnumber="1" />
+		</pattern>
+		
+		<set-next-rule methodname="setInitParameters" />
+		
+	</pattern>
+		
+		
+		<set-next-rule methodname="addDaemonBean" />
+	</pattern>
+</digester-rules>

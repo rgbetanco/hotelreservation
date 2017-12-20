@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.commonarchive.looseconfig:LooseConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.etools.commonarchive.looseconfig="commonarchive.looseconfig.xmi">
+  <applications uri="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\hotelreserve\NicahostEAR" binariesPath="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\hotelreserve\NicahostEAR" resourcesPath="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\hotelreserve\NicahostEAR">
+    <looseArchives xsi:type="com.ibm.etools.commonarchive.looseconfig:LooseWARFile" uri="NicahostWeb.war" binariesPath="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\hotelreserve\NicahostWeb\WebContent" resourcesPath="C:\Documents and Settings\Ronald\My Documents\IBM\wsappdev51\hotelreserve\NicahostWeb\WebContent"/>
+  </applications>
+</com.ibm.etools.commonarchive.looseconfig:LooseConfiguration>

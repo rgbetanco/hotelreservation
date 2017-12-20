@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Contiene los parametros globales de inicializacion de la aplicacion
+	Henry Jiron.  Nov 12, 2005
+-->
+<init-params>
+	<init-param>
+		<param-name>DefaultNights</param-name>
+		<param-value>7</param-value>
+
+	</init-param>
+	<init-param>
+		<param-name>MarchantId</param-name>
+		<param-value>000000060001006</param-value>
+	</init-param>
+	<init-param>
+		<param-name>TerminalId</param-name>
+		<param-value>INET0015</param-value>
+	</init-param>
+	<init-param>
+		<param-name>RealPayCGIDAT</param-name>
+		<param-value>/WEB-INF/realPay/</param-value>
+	</init-param>
+
+</init-params>

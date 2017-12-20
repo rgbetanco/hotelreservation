@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+
+<!--
+     This is a blank Validator form file with a commented examples.
+-->
+
+    <global>
+		<constant>
+			<constant-name>onlyletters</constant-name>
+			<constant-value>^[a-zA-Z]*$</constant-value>
+		</constant>
+
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+
+
+        <constant>
+        	<constant-name>telf</constant-name>
+        	<constant-value>^(\(?(\d{3})\)?[-| ]?)?(\d{3})[-| ]?(\d{4})$</constant-value>
+        </constant>
+    </global>
+
+
+
+    <formset>
+    	<form name="signInForm">
+    		<field property="email" depends="required">
+	    		<arg key="label.classified.email"></arg>
+    		</field>
+    		<field property="password" depends="required">
+	    		<arg key="label.classified.password"></arg>
+    		</field>
+    	</form>
+
+    	<form name="changePwdForm">
+    		<field property="email" depends="required">
+	    		<arg key="label.classified.email"></arg>
+    		</field>
+    		<field property="oldPassword" depends="required">
+	    		<arg key="label.classified.password"></arg>
+    		</field>
+        	<field property="password" depends="required,twofields">
+        		<arg key="label.classified.password"></arg>
+        		<var>
+        			<var-name>secondProperty</var-name>
+        			<var-value>retypepassword</var-value>
+        		</var>
+        	</field>    		
+    	</form>    	    
+    	<form name="forgotPwdForm">
+    		<field property="email" depends="required">
+	    		<arg key="label.classified.email"></arg>
+    		</field>
+		</form>
+    	<form name="searchForm">
+    		<field property="criteria" depends="required">
+	    		<arg key="label.classified.searchcriteria"></arg>
+    		</field>
+    	</form>
+
+        <form name="newAccountForm">
+        	<field property="name" 	depends="required">
+        		<arg key="label.classified.name"></arg>
+        	</field>
+        	<field property="email" depends="required,email">
+        		<arg key="label.classified.email"></arg>
+        	</field>
+        	<field property="password" depends="required,twofields">
+        		<arg key="label.classified.password"></arg>
+        		<var>
+        			<var-name>secondProperty</var-name>
+        			<var-value>confirmpwd</var-value>
+        		</var>
+        	</field>
+        </form>
+        
+        <form name="emailForm">
+        	<field property="toEmail" depends="required">
+        	</field>
+        	<field property="fromEmail" depends="required,email">
+        	</field>
+        	<field property="productDescription" depends="required">
+        	</field>
+        	<field property="body" depends="required">
+        	</field>
+        </form>
+        
+        <form name="anuncieseForm">
+            <field property="name" depends="required">
+        		<arg key="label.anuncieseform.name"/>
+        	</field>
+        	<field property="phone" depends="required,mask">
+        		<arg key="label.anuncieseform.phone"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telf}</var-value>
+				</var>	        		
+        	</field>
+        	<field property="email" depends="required,email">
+        		<arg key="label.anuncieseform.email"/>
+        	</field>        	
+        	<field property="title" depends="required">
+        		<arg key="label.anuncieseform.title"/>
+        	</field>
+        	<field property="desc" depends="required">
+        		<arg key="label.anuncieseform.desc"/>
+        	</field>
+        	<field property="category" depends="required">
+        		<arg key="label.anuncieseform.category"/>
+        	</field>
+        	<field property="duration" depends="required">
+        		<arg key="label.anuncieseform.duration"/>
+        	</field>
+        	<field property="price" depends="required,double">
+        		<arg key="label.anuncieseform.price"/>
+        	</field>
+        	<field property="currency" depends="required">
+        		<arg key="label.anuncieseform.currency" />
+        	</field>
+        	<field property="myFile" depends="maxFileSize,fileFormat">
+        		<arg key="label.anuncieseform.maxfilesize" />
+				<var>
+					<var-name>maxSize</var-name>
+					<var-value>256000</var-value>
+				</var>					
+				<var>
+					<var-name>fileTypes</var-name>
+					<var-value>jpg,jpeg,gif,png</var-value>					
+				</var>
+				
+        	</field>
+
+        	<!-- field property="categoryName" depends="required">
+        		<arg key="label.anuncieseform.categoryName"/>
+        	</field -->
+        	<!-- field property="fileName" depends="required">
+        		<arg key="label.anuncieseform."/>
+        	</field -->
+        	<!-- field property="imgPath" depends="required">
+        		<arg key="label.anuncieseform."/>
+        	</field -->
+
+
+        	
+        </form>
+		
+		<form name="/paymentinfo">
+			<field property="name" depends="required">
+			</field>		
+			<field property="address" depends="required">
+			</field>
+			<field property="city" depends="required">
+			</field>
+			<field property="state" depends="required">
+			</field>
+			<field property="zip" depends="required,mask">
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${postalCode}</var-value>
+				</var>							
+			</field>
+			<field property="phone" depends="required,mask">
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${telf}</var-value>
+				</var>							
+			</field>
+			<field property="country" depends="required">
+			</field>
+		</form>
+		
+		<!-- Validacion para el shipping option -->
+		<form name="/shippingoption">
+			<field property="cardType" depends="required"></field>
+			<field property="cardNumber" depends="required,creditCard"></field>
+			<field property="cardMonth" depends="required"></field>
+			<field property="cardYear" depends="required"></field>
+			<field property="cardName" depends="required"></field>					
+		</form>
+		
+		<form name="/placeorder">
+			<field property="shippingOption" depends="required"></field>
+		</form>
+		
+		<form name="/fastcheckoutlogin">
+			<field property="email" depends="required,email" />
+			<field property="password" depends="required" />
+		</form>
+		
+		<!-- Validacion para new seller account -->
+		<form name="/selleronlinebank">
+			<field property="cardType" depends="required"></field>
+			<field property="cardNumber" depends="required,creditCard"></field>
+			<field property="cardMonth" depends="required"></field>
+			<field property="cardYear" depends="required"></field>
+			<field property="cardName" depends="required"></field>
+			<field property="cardCCV" depends="required"></field>								
+		</form>
+		<form name="/selleronlinesellingfee">
+			<field property="bankAccountHolder" depends="required"></field>
+			<field property="bankName" depends="required"></field>
+			<field property="bankAccount" depends="required"></field>			
+		</form>
+		
+		<form name="/selleronlineagree">
+			<field property="sellingFee" depends="required"></field>
+		</form>
+
+		<form name="/selleronlineadd">
+			<field property="Iagree" depends="required"></field>
+		</form>
+
+    </formset>
+</form-validation>

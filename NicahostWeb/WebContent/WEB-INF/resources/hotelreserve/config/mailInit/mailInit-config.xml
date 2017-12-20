@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MailServer>
+
+	<init-param>
+		<param-name>from</param-name>
+		<param-value>hotelreserve@nicahost.com</param-value>
+	</init-param>
+
+	<mailing-list id="Administradores" >
+		<mail>torobravo@realtynica.com</mail>
+		<mail>rgbetanco@realtynica.com</mail>
+	</mailing-list>
+	
+	<mailing-list id="Operadores">
+		<mail>hjiron@yahoo.com</mail>
+		<mail>rgbetanco@yahoo.com</mail>
+	</mailing-list>
+
+
+	
+</MailServer>

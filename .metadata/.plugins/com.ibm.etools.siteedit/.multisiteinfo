@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<multisite-config>
+    <project-data name="NicahostWeb">
+        <data>
+            <item name="NicahostWeb" stamp="72"/>
+        </data>
+    </project-data>
+</multisite-config>

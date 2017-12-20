@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<!-- Data Sources -->
+	<data-sources>
+	</data-sources>
+
+	<!-- Form Beans -->
+	<form-beans>
+		<form-bean name="step01Form" 
+				   type="com.nicahost.module.hotelreserve.form.Step01Form">
+
+		</form-bean>
+		<form-bean name="languageForm" type="com.nicahost.module.hotelreserve.form.LanguageForm">
+		</form-bean>
+		<form-bean name="reserveForm" type="com.nicahost.module.hotelreserve.form.ReserveForm">
+		</form-bean>
+
+		<form-bean name="errorForm" type="com.nicahost.framework.common.form.ErrorForm">
+		</form-bean>
+		<form-bean name="loginForm" type="com.nicahost.module.hotelreserve.form.LoginForm">
+		</form-bean>
+		
+	</form-beans>
+
+	<!-- Global Exceptions -->
+	<global-exceptions>
+	</global-exceptions>
+
+	<!-- Global Forwards -->
+	<global-forwards>
+		<forward name="GeneralError" path="/showError.do" >
+		</forward>
+		
+	</global-forwards>
+	<!-- Action Mappings -->
+
+		
+	<action-mappings>  
+		<action path="/showError" type="com.nicahost.framework.common.action.ShowErrorAction" name="errorForm" scope="request" validate="false">
+			<forward name="Success" path="error.layout" contextRelative="true">
+			</forward>
+		</action>	
+	
+		<action
+			path="/switchLang" 
+			type="com.nicahost.module.hotelreserve.action.SwitchLanguageAction" 
+			name="languageForm" 
+			validate="false"
+			scope="session">
+			<forward name="Success" path="/reserve.do" />
+		</action>
+	
+		<action 
+			path="/reserve" 
+			type="com.nicahost.module.hotelreserve.action.Step00Action" 
+			name="step01Form" 
+			validate="false"
+			scope="request">
+			<forward name="Success" path="step01.layout" />
+		</action>
+
+		<action 
+			path="/step01" 
+			type="com.nicahost.module.hotelreserve.action.Step01Action" 
+			name="step01Form" 
+			scope="request" 
+			validate="true" 
+			input="/reserve.do">
+			
+			<forward name="Success" path="step02.layout"  />
+		
+		</action>
+
+		<action path="/step02" 
+				type="com.nicahost.module.hotelreserve.action.Step02Action" 
+				name="reserveForm" 
+				scope="session" 
+				validate="true"
+				input="/step01.do">
+			<forward name="Success" path="step03.layout"  />
+		</action>
+
+		<action path="/step03" 
+				type="com.nicahost.module.hotelreserve.action.Step03Action" 
+				name="reserveForm" 
+				scope="session" 
+				validate="true"
+				input="/step02.do">
+				
+			<forward name="Success" path="step04.layout"  />							
+		</action>
+
+		<action path="/step04" 
+				type="com.nicahost.module.hotelreserve.action.Step04Action" 
+				name="reserveForm" 
+				scope="session" 
+				validate="false"
+				input="/step03.do">
+				
+			<forward name="Success" path="step05.layout"  />							
+		</action>
+
+		<action path="/step05" 
+				type="com.nicahost.module.hotelreserve.action.Step05Action" 
+				name="reserveForm" 
+				scope="session" 
+				validate="true"
+				input="/step04.do">
+				
+			<forward name="Success" path="step06.layout"  />							
+		</action>
+		<action path="/step06" 
+				type="com.nicahost.module.hotelreserve.action.Step06Action" 
+				name="reserveForm" 
+				scope="session" 
+				validate="false"
+				input="/step05.do">
+				
+			<forward name="Success" path="step07.layout"  />							
+		</action>
+		
+		<action path="/showLogin" 
+				type="org.apache.struts.actions.ForwardAction" 
+				name="loginForm" 
+				scope="request" 				
+				parameter="login.layout" 
+				validate="false" 
+				input="login.layout">
+		</action>
+
+		<action path="/showPlacedReservation" 
+				type="com.nicahost.module.hotelreserve.action.ShowPlacedReservationsAction" 
+				name="loginForm" 
+				scope="request" 
+				validate="true" 
+				input="login.layout">
+				
+				<forward name="Success" path="placedReservation.layout"  />
+		</action>
+
+		<action path="/showGallery" 
+				type="com.nicahost.module.hotelreserve.action.ShowGalleryAction">
+				
+			<forward name="Success" path="/jsp/hotelreserve/photoGallery.jsp" contextRelative="true" />				
+		</action>
+
+		<action path="/cancelReservation" 
+				type="com.nicahost.module.hotelreserve.action.CancelReservationAction">
+				
+				<forward name="Success" path="cancelconfirm.layout"  />
+		</action>
+
+		<!-- ****************************************************************************** -->
+		<!-- 						ADMINISTRACION											-->
+		<!-- ****************************************************************************** -->		
+		<action path="/reservations" 
+				type="com.nicahost.module.hotelreserve.admin.action.ShowReservationsAction" 
+				>
+			<forward name="Success" path="reservations.layout"  />
+		</action>
+
+		<action path="/commitAdminChanges" 
+				type="com.nicahost.module.hotelreserve.admin.action.commitChangesAction">
+				
+				<forward name="Success" path="confirmation.layout"/>
+		</action>
+		<action path="/sendMail" 
+				name="SendMailForm" 
+				type="com.nicahost.module.hotelreserve.admin.action.SendMailAction" scope="request">
+				
+				<forward name="Success" path="reservations.layout"  />
+		</action>
+		<action path="/history" 
+				type="com.nicahost.module.hotelreserve.admin.action.ShowHistoryAction">
+				
+				<forward name="Success" path="history.layout"/>
+		</action>
+
+		<action path="/rooms" 
+				type="com.nicahost.module.hotelreserve.admin.action.ShowRoomsTableAction">
+		
+				<forward name="Success" path="room.layout"/>
+		</action>
+		<action path="/updateRooms" 
+				type="com.nicahost.module.hotelreserve.admin.action.UpdateRoomsTableAction">
+				
+				<forward name="Success" path="updateRoom.layout"/>
+		</action>
+		<action path="/insertRoom" 
+		type="com.nicahost.module.hotelreserve.admin.action.InsertRoomsTableAction">
+		
+		<forward name="Success" path="insertRoom.layout"/>
+		</action>
+		<action path="/confirmedAnulled" 
+		type="com.nicahost.module.hotelreserve.admin.action.ShowConfirmedAnulledAction">
+		
+		<forward name="Success" path="confirmedAnulled.layout"/>
+		</action>
+		
+		<action path="/Filter" type="com.nicahost.module.hotelreserve.admin.action.FilterConfirmedAnnulledAction">
+		<forward name="Success" path="filter.layout"/>
+		</action>
+		
+		<action path="/logout" 
+				type="com.nicahost.module.hotelreserve.admin.action.LogoutAction">
+				
+				<forward name="Success" path="/reserve.do"/>
+		</action>
+		
+	</action-mappings>
+
+
+	<message-resources parameter="com.nicahost.module.hotelreserve.resource.HotelReserveMessageResource" />
+
+	<!--plug-in className="com.nicahost.module.hotelreserve.init.HotelReserveInitPlugin" /-->
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/resources/hotelreserve/tiles-hotelreserve-defs.xml"/>
+		<set-property property="moduleAware" value="true"/>
+		<set-property property="definitions-debug" value="2"/>
+		<set-property property="definitions-parser-details" value="2"/>
+		<set-property property="definitions-parser-validate" value="true"/>
+	</plug-in> 
+
+      <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/resources/framework/validator-rules.xml,/WEB-INF/resources/hotelreserve/validation.xml"/>
+      </plug-in>
+
+</struts-config>

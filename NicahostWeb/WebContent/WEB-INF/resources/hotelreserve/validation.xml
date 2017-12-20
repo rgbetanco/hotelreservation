@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+
+<!--
+     This is a blank Validator form file with a commented examples.
+-->
+
+    <global>
+
+
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+
+
+        <constant>
+        	<constant-name>telf</constant-name>
+        	<constant-value>^(\(?(\d{3})\)?[-| ]?)?(\d{3})[-| ]?(\d{4})$</constant-value>
+        </constant>
+    </global>
+
+
+
+    <formset>
+        <form name="step01Form">
+             <field
+                property="roomTypeId"
+                depends="required">
+            	<arg key="label.step01.availability"></arg>
+            </field>
+    	     <field
+	            property="initDate"
+            	depends="required">
+        	    <arg key="label.step01.datein"/>
+    	     </field>
+	         <field property="endDate" depends="required">
+         		<arg key="label.step01.datein"></arg>
+         	</field>
+        </form>
+        
+        <form name="/step02">
+        	<field property="toString" depends="required" indexedListProperty="selectedIdRooms"><arg key="label.common.selectedrooms" />
+        	</field>
+        </form>
+
+
+        <form name="/step03">
+        	<field property="firstName" 
+        			depends="required">
+        		<arg key="label.common.firstname"></arg>
+        	</field>
+        	<field property="lastName" depends="required">
+        		<arg key="label.common.lastname"></arg>
+        	</field>
+        	<field property="country" depends="required">
+        		<arg key="label.common.country"></arg>
+        	</field>
+        	<field property="email1" depends="required,email,twofields">
+        		<arg key="label.common.email"></arg>
+        		<var>
+        			<var-name>secondProperty</var-name>
+        			<var-value>email2</var-value>
+        		</var>
+        	</field>
+
+
+        </form>
+        <form name="/step05">
+        	<field property="cardType" depends="required">
+        		<arg key="label.common.cardtype"></arg>
+        	</field>
+        	<field property="cardHolder" depends="required">
+        		<arg key="label.common.cardholder"></arg>
+        	</field>         	
+        	<field property="cardNumber" depends="required,creditCard">
+        		<arg key="label.common.cardnumber"></arg>
+        	</field>
+        	<field property="cardMonth" depends="required">
+        		<arg key="label.common.cardmonth"></arg>
+        	</field>
+        	<field property="cardYear" depends="required">
+        		<arg key="label.common.cardyear"></arg>
+        	</field>
+       	<field property="policyCancelation" depends="required">
+        		<arg key="label.common.policycancelation"></arg>
+        	</field>        	
+        </form>
+    </formset>
+</form-validation>

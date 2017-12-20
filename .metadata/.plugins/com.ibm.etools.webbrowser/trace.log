@@ -1,0 +1,14 @@
+----->----- Web Browser plugin startup ----->-----
+com.ibm.etools.webbrowser - 5.1.1
+Opening browser: WebBrowserEditorInput[http://localhost:9080/NicahostWeb/ 38 null]
+setURL: http://localhost:9080/NicahostWeb/ true
+->- Loading .urlMap extension point ->-
+  Loaded url map: com.ibm.etools.webbrowser.standard.urlMap
+-<- Done loading .urlMap extension point -<-
+Navigate: http://localhost:9080/NicahostWeb/
+getLocationURL: 
+getLocationURL: http://localhost:9080/NicahostWeb/
+setURL: http://localhost:9080/NicahostWeb/ false
+getLocationURL: http://localhost:9080/NicahostWeb/
+setURL: http://localhost:9080/NicahostWeb/ false
+----->----- Web Browser plugin shutdown ----->-----

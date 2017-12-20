@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!-- Data Sources -->
+	<data-sources>
+	</data-sources>
+
+	<!-- Form Beans -->
+	<form-beans>
+
+	</form-beans>
+
+	<!-- Global Exceptions -->
+	<global-exceptions>
+	</global-exceptions>
+
+	<!-- Global Forwards -->
+	<global-forwards>
+
+	</global-forwards>
+
+	<!-- Action Mappings -->
+	<action-mappings>
+
+	</action-mappings>
+
+	<message-resources parameter="com.nicahost.framework.common.resource.FrameworkMessageResources" /> 
+	
+	
+	<plug-in className="com.nicahost.common.config.init.plugin.SbeInitPlugin">
+		<set-property property="initArrayRuleFile" value="/WEB-INF/resources/common/config/common/init-array-digester-rules.xml" />
+		<set-property property="initRulesFile" value="/WEB-INF/resources/common/config/initPlugin/xml-rules-config.xml" />
+		<set-property property="initFile" value="/WEB-INF/resources/common/config/initPlugin/initPlugin-config.xml" />
+		<set-property property="initLog4j" value="/WEB-INF/resources/log4j.properties"/>
+	</plug-in>	
+	
+	
+	
+</struts-config>

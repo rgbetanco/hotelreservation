@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Contiene una lista de todos los sets de reglas de Digester que se cargan al iniciar la
+	aplicación. Cada archivo tiene un identificador único que permite ser identificado dentro
+	de la aplicación.
+	jvillalobos. 05-11-2004
+-->
+<init-params>
+	<init-param>
+		<param-name>InitArray</param-name>
+		<param-value>/WEB-INF/resources/common/config/common/init-array-digester-rules.xml</param-value>
+	</init-param>
+	<init-param>
+		<param-name>InitMap</param-name>
+		<param-value>/WEB-INF/resources/common/config/common/init-map-digester-rules.xml</param-value>
+	</init-param>
+	<init-param>
+		<param-name>List</param-name>
+		<param-value>/WEB-INF/resources/common/config/common/list-digester-rules.xml</param-value>
+	</init-param>
+	<init-param>
+		<param-name>ListMap</param-name>
+		<param-value>/WEB-INF/resources/common/config/common/list-map-digester-rules.xml</param-value>
+	</init-param>
+	<init-param>
+		<param-name>InitPlugin</param-name>
+		<param-value>/WEB-INF/resources/common/config/initPlugin/initPlugin-digester-rules.xml</param-value>
+	</init-param>
+	<init-param>
+		<param-name>DataSource</param-name>
+		<param-value>/WEB-INF/resources/common/config/dataSource/dataSources-digester-rules.xml</param-value>
+	</init-param>
+
+	<init-param>
+		<param-name>InitDaemon</param-name>
+		<param-value>/WEB-INF/resources/common/config/initDaemon/initDaemon-digester-rules.xml</param-value>
+	</init-param>
+
+	<!-- Modulo de hotelreserve -->
+	<init-param>
+		<param-name>MailInit</param-name>
+		<param-value>/WEB-INF/resources/hotelreserve/config/mailInit/mailInit-digester-rules.xml</param-value>
+	</init-param>
+	
+	
+</init-params>

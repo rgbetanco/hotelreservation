@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE digester-rules PUBLIC "-//Jakarta Apache //DTD digester-rules XML V1.0//EN"
+		 "http://jakarta.apache.org/commons/digester/dtds/digester-rules.dtd"> 
+<!--
+Reglas de Digester para los archivos de inicialización que tienen un mapa con listas de items.
+jvillalobos. 06-12-2004
+-->
+<digester-rules>
+	<object-create-rule pattern="list-map" classname="java.util.HashMap" />
+   
+   	<pattern value="list-map/list">
+		<call-method-rule methodname="put" paramcount="2" />
+		<call-param-rule attrname="id" paramnumber="0" />
+		
+		<object-create-rule classname="java.util.ArrayList" />
+		<call-method-rule pattern="item" methodname="add" paramcount="0" />
+	   	
+		<call-param-rule from-stack="true" paramnumber="1" />
+	</pattern>
+</digester-rules>

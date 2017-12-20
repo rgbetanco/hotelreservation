@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Contiene los parametros globales de inicializacion de la aplicacion
+	Henry Jiron.  Jan 16, 2006
+-->
+<init-params>
+	<init-param>
+		<param-name>maxHits</param-name>
+		<param-value>3</param-value>
+	</init-param>
+	<init-param>
+		<param-name>tempimg</param-name>
+		<param-value>../../../img/clasificados/uploaded</param-value>
+	</init-param>
+	<init-param>
+		<param-name>uploadimgpath</param-name>
+		<param-value>/img/clasificados/uploaded</param-value>
+	</init-param>
+	<init-param>
+		<param-name>maxuploadimgsize</param-name>
+		<param-value>256000</param-value>
+	</init-param>
+	<init-param>
+		<param-name>reply-to-email</param-name>
+		<param-value>sales@elcalachero.com</param-value>
+	</init-param>	
+</init-params>

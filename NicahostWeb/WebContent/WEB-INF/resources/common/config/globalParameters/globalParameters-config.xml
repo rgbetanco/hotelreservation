@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<init-params>
+	<init-param>
+		<param-name>SMTPServer</param-name>
+		<!--
+		<param-value>mail.nicahost.com</param-value>
+		-->
+		<param-value>mail.realtynica.com</param-value>
+	</init-param>
+	<init-param>
+		<param-name>RealPayHost</param-name>
+		<param-value>196.40.22.198</param-value>
+	</init-param>
+	<init-param>
+		<param-name>RealPayPort</param-name>
+		<param-value>4433</param-value>
+	</init-param>
+	<init-param>
+		<param-name>TempFiles</param-name>
+		<param-value>/WEB-INF/temp/</param-value>
+	</init-param>
+	<init-param>
+		<param-name>RealPayCGI</param-name>
+		<param-value>/WEB-INF/realPay/newcli_aut.exe</param-value>
+	</init-param>
+	<init-param>
+		<param-name>EncryptAlgorithm</param-name>
+		<param-value>SHA-1</param-value>
+	</init-param>
+</init-params>

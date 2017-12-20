@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Contiene los parámetros de inicio para la aplicación.
+jvillalobos. 12-11-2004
+-->
+<init-plugin-config>
+	<init-params>
+		<init-param>
+			<param-name>propertiesKey</param-name>
+			<param-value>_PROPERTIES</param-value>
+		</init-param>
+	</init-params>
+	<init-modules>
+		<init-module>
+			<config-class>com.nicahost.common.dao.DBBaseDAO</config-class>
+			<config-file>/WEB-INF/resources/common/config/dataSource/dataSources-config.xml</config-file>
+			<config-rules-key>DataSource</config-rules-key>
+		</init-module>	
+
+		<init-module>
+			<config-class singleton="true">com.nicahost.common.config.bean.GlobalParametersBean</config-class>
+			<config-file>/WEB-INF/resources/common/config/globalParameters/globalParameters-config.xml</config-file>
+			<config-rules-key>InitMap</config-rules-key>
+		</init-module>			
+
+		
+		<init-module>
+			<config-class singleton="true">com.nicahost.common.config.bean.CardParametersBean</config-class>
+			<config-file>/WEB-INF/resources/common/config/card/cardParameters-config.xml</config-file>
+			<config-rules-key>InitArray</config-rules-key>
+		</init-module>	
+		
+		<init-module>
+			<config-class>com.nicahost.common.config.init.DaemonInit</config-class>
+			<config-file>/WEB-INF/resources/common/config/initDaemon/initDaemon-config.xml</config-file>
+			<config-rules-key>InitDaemon</config-rules-key>
+		</init-module>
+		
+		<!-- Modulo de hotelreserve -->
+		<init-module>
+			<config-class singleton="true">com.nicahost.module.hotelreserve.config.bean.HotelReserveInitParamBean</config-class>
+			<config-file>/WEB-INF/resources/hotelreserve/config/initParam/initParam-config.xml</config-file>
+			<config-rules-key>InitMap</config-rules-key>
+		</init-module>	
+		
+		<init-module>
+			<config-class singleton="true">com.nicahost.module.hotelreserve.config.bean.HotelReserveInitMailBean</config-class>
+			<config-file>/WEB-INF/resources/hotelreserve/config/mailInit/mailInit-config.xml</config-file>
+			<config-rules-key>MailInit</config-rules-key>
+		</init-module>	
+		
+	</init-modules>
+</init-plugin-config>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<digester-rules>
+	<pattern value="MailServer">
+   		<object-create-rule classname="com.nicahost.common.config.bean.InitParameterMapBean" />   
+	   	<pattern value="init-param">
+			<call-method-rule methodname="addParameter" paramcount="2" />
+			<call-param-rule pattern="param-name" paramnumber="0" />
+			<call-param-rule pattern="param-value" paramnumber="1" />
+		</pattern>
+		
+		<object-create-rule pattern="list-map" classname="java.util.HashMap" />   
+	   	<pattern value="mailing-list">
+			<call-method-rule methodname="put" paramcount="2" />
+			<call-param-rule attrname="id" paramnumber="0" />
+	
+			<object-create-rule classname="java.util.ArrayList" />
+			<call-method-rule pattern="mail" methodname="add" paramcount="0" />
+	   	
+			<call-param-rule from-stack="true" paramnumber="1" />
+		</pattern>
+
+		<object-create-rule pattern="list-map" classname="java.util.HashMap" />
+		
+
+	</pattern>
+
+</digester-rules>

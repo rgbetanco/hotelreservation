@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+   <publishable memento="config" parents="">
+      <resource localPath=".repository" localTimestamp="2088"/>
+      <resource localPath="cells" localTimestamp="2089"/>
+      <resource localPath="cells/localhost" localTimestamp="2091"/>
+      <resource localPath="cells/localhost/applications" localTimestamp="2093"/>
+      <resource localPath="cells/localhost/applications/IBMUTC.ear" localTimestamp="2104"/>
+      <resource
+         localPath="cells/localhost/applications/IBMUTC.ear/deployments" localTimestamp="2106"/>
+      <resource
+         localPath="cells/localhost/applications/IBMUTC.ear/deployments/IBMUTC" localTimestamp="2113"/>
+      <resource localPath="cells/localhost/applications/NicahostEAR.ear" localTimestamp="2159"/>
+      <resource
+         localPath="cells/localhost/applications/NicahostEAR.ear/deployments" localTimestamp="2160"/>
+      <resource
+         localPath="cells/localhost/applications/NicahostEAR.ear/deployments/NicahostEAR" localTimestamp="2166"/>
+      <resource localPath="cells/localhost/nodes" localTimestamp="2098"/>
+      <resource localPath="cells/localhost/nodes/localhost" localTimestamp="2105"/>
+      <resource localPath="cells/localhost/nodes/localhost/servers" localTimestamp="2111"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/servers/server1" localTimestamp="2114"/>
+      <resource localPath="cells/localhost/cell.xml" localTimestamp="7960"/>
+      <resource localPath="cells/localhost/multibroker.xml" localTimestamp="7961"/>
+      <resource localPath="cells/localhost/namestore.xml" localTimestamp="7962"/>
+      <resource localPath="cells/localhost/naming-authz.xml" localTimestamp="7963"/>
+      <resource localPath=".repository/metadata.xml" localTimestamp="2090"/>
+      <resource localPath="cells/localhost/admin-authz.xml" localTimestamp="7959"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/namestore.xml" localTimestamp="7969"/>
+      <resource localPath="cells/localhost/nodes/localhost/node.xml" localTimestamp="7970"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/resources.xml" localTimestamp="7971"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/serverindex.xml" localTimestamp="7972"/>
+      <resource
+         localPath="cells/localhost/applications/IBMUTC.ear/deployments/IBMUTC/deployment.xml" localTimestamp="7974"/>
+      <resource
+         localPath="cells/localhost/applications/NicahostEAR.ear/deployments/NicahostEAR/deployment.xml" localTimestamp="7975"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/servers/server1/namestore-cell.xml" localTimestamp="7976"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/servers/server1/namestore-node.xml" localTimestamp="7977"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/servers/server1/resources.xml" localTimestamp="7978"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/servers/server1/server.xml" localTimestamp="7979"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/servers/server1/variables.xml" localTimestamp="7980"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/servers/server1/ws-security.xml" localTimestamp="7981"/>
+      <resource
+         localPath="cells/localhost/nodes/localhost/variables.xml" localTimestamp="7973"/>
+      <resource localPath="cells/localhost/pmirm.xml" localTimestamp="7964"/>
+      <resource localPath="cells/localhost/resources.xml" localTimestamp="7965"/>
+      <resource localPath="cells/localhost/security.xml" localTimestamp="7966"/>
+      <resource localPath="cells/localhost/variables.xml" localTimestamp="7967"/>
+      <resource localPath="cells/localhost/virtualhosts.xml" localTimestamp="7968"/>
+   </publishable>
+</server>

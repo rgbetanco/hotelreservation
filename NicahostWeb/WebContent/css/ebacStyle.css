@@ -1,0 +1,474 @@
+BODY {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+#mainTable {
+	WIDTH: 950px
+}
+#userInfoTable {
+	BACKGROUND: #eeeeee
+}
+.divisionLine {
+	PADDING-BOTTOM: 0px; MARGIN: 6px 10px; COLOR: #999999; PADDING-TOP: 0px; HEIGHT: 1px
+}
+.bankDivisionLine {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 10px 6px; COLOR: #999999; PADDING-TOP: 0px; HEIGHT: 1px
+}
+.leftPanel {
+	BACKGROUND: #eeeeee
+}
+#bgMainContentLayoutTable {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND: #acacac; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+#mainContentLayoutTable {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND: #ffffff; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+#mainContentTable {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND: #ffffff; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+#resultsTable {
+	PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; BACKGROUND: #ffffff; PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px; BORDER-BOTTOM: 0px; border-spacing: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px
+}
+#resultsTable TH {
+	BACKGROUND: #cccccc; VERTICAL-ALIGN: middle; HEIGHT: 20px; TEXT-ALIGN: center
+}
+#resultsTable TR {
+	BACKGROUND: #ffffff; VERTICAL-ALIGN: middle
+}
+#resultsTable TD {
+	VERTICAL-ALIGN: middle; HEIGHT: 25px;
+}
+#resultsTableOnTop {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; BACKGROUND: #ffffff; PADDING-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; border-spacing: 0px
+}
+#resultsTableOnTop TH {
+	BACKGROUND: #cccccc; VERTICAL-ALIGN: middle; HEIGHT: 20px; TEXT-ALIGN: center
+}
+#resultsTableOnTop TR {
+	BACKGROUND: #ffffff; VERTICAL-ALIGN: top
+}
+#resultsTableOnTop TD {
+	VERTICAL-ALIGN: top; HEIGHT: 20px
+}
+#footerContentTable {
+	BACKGROUND: #ffffff
+}
+#footerContentTable TR {
+	BACKGROUND: #ffffff
+}
+#footerContentTable TD {
+	BACKGROUND: #ffffff
+}
+#imglink {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; BORDER-LEFT: 0px; LINE-HEIGHT: 0; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; TEXT-DECORATION: none; marging: 0
+}
+#leftFrame {
+	BACKGROUND: #eeeeee
+}
+#exchangeRateTable {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; BACKGROUND: #ffffff; PADDING-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; border-spacing: 0px
+}
+#exchangeRateTable TH {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: #eeeeee; VERTICAL-ALIGN: middle; COLOR: #5e5753; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 25px; TEXT-DECORATION: none
+}
+#exchangeRateTable TR.even {
+	BACKGROUND: #ffffff
+}
+#exchangeRateTable TR.odd {
+	BACKGROUND: #eeeeee
+}
+#exchangeRateTable TD {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; VERTICAL-ALIGN: middle; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 20px; TEXT-DECORATION: none
+}
+#publicityTable {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND: #eeeeee; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+#publicityTable TH {
+	
+}
+#publicityTable TR {
+	
+}
+#publicityTable TD {
+	
+}
+#footerCell {
+	BACKGROUND: #acacac
+}
+#logoMenuTable {
+	BACKGROUND: #acacac
+}
+#topLeftLogoTable {
+	BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(/NicahostWeb/ebac/images/common/topRightCorner.gif); VERTICAL-ALIGN: middle; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #c80000
+}
+#bottomLeftLogoTable {
+	BACKGROUND-COLOR: #c80000
+}
+.totals {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #c80000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.subtotals {
+	MARGIN-TOP: 3px; FONT-WEIGHT: bold; FONT-SIZE: 10px; MARGIN-BOTTOM: 8px; COLOR: #5e5753; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.tableData {
+	MARGIN-TOP: 0px; FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.contentFooterNav {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.contentFooterNav A {
+	FONT-WEIGHT: bold; COLOR: #c80000; TEXT-DECORATION: none
+}
+.contentFooterNav A:link {
+	FONT-WEIGHT: bold; COLOR: #c80000; TEXT-DECORATION: none
+}
+.contentFooterNav A:visited {
+	FONT-WEIGHT: bold; COLOR: #c80000; TEXT-DECORATION: none
+}
+.contentFooterNav A:hover {
+	FONT-WEIGHT: bold; COLOR: #c80000; TEXT-DECORATION: none
+}
+.contentFooterNav A:active {
+	FONT-WEIGHT: bold; COLOR: #c80000; TEXT-DECORATION: none
+}
+.footer {
+	FONT-WEIGHT: bold; FONT-SIZE: 9px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.sectiontitle {
+	MARGIN-TOP: 0px; FONT-WEIGHT: bold; FONT-SIZE: 10px; MARGIN-BOTTOM: 0px; TEXT-TRANSFORM: uppercase; COLOR: #c80000; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; TEXT-DECORATION: none
+}
+.subSectionTitle {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.subSectionTitle STRONG {
+	TEXT-TRANSFORM: uppercase
+}
+.resultsTableTitle {
+	MARGIN-TOP: 3px; FONT-WEIGHT: bold; FONT-SIZE: 12px; MARGIN-BOTTOM: 8px; TEXT-TRANSFORM: uppercase; COLOR: #5e5753; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.userInfo {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.publicity {
+	BORDER-RIGHT: thin; PADDING-RIGHT: 4px; BORDER-TOP: thin; PADDING-LEFT: 4px; FONT-WEIGHT: normal; FONT-SIZE: 9px; PADDING-BOTTOM: 4px; MARGIN: 4px; BORDER-LEFT: thin; COLOR: #000000; PADDING-TOP: 4px; BORDER-BOTTOM: thin; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.publicity A {
+	FONT-WEIGHT: bold; FONT-SIZE: 9px; COLOR: #efefef; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.publicity A:link {
+	FONT-WEIGHT: bold; COLOR: #5e5753; TEXT-DECORATION: none
+}
+.publicity A:visited {
+	FONT-WEIGHT: bold; COLOR: #5e5753; TEXT-DECORATION: none
+}
+.publicity A:hover {
+	FONT-WEIGHT: bold; COLOR: #5e5753; TEXT-DECORATION: none
+}
+.publicity A:active {
+	FONT-WEIGHT: bold; COLOR: #5e5753; TEXT-DECORATION: none
+}
+.leftLayoutSectionTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; MARGIN: 5px; COLOR: #5e5753; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.tableTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #5e5753; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linkNavBar {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linkNavBar A {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linkNavBar A:link {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.linkNavBar A:visited {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.linkNavBar A:hover {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline
+}
+.linkNavBar A:active {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.linkNavBar STRONG {
+	FONT-SIZE: 11px; TEXT-TRANSFORM: uppercase
+}
+.linkTop {
+	FONT-WEIGHT: bold; FONT-SIZE: 9px; TEXT-TRANSFORM: uppercase; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linkTop A {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linkTop A:link {
+	FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.linkTop A:visited {
+	FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.linkTop A:hover {
+	FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.linkTop A:active {
+	FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.linkTopSelected {
+	FONT-WEIGHT: bold; FONT-SIZE: 9px; TEXT-TRANSFORM: uppercase; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linkTopSelected A {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.linkTopSelected A:link {
+	FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.linkTopSelected A:visited {
+	FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.linkTopSelected A:hover {
+	FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.linkTopSelected A:active {
+	FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.linkMessage {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linkMessage A {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linkMessage A:link {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.linkMessage A:visited {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.linkMessage A:hover {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: underline
+}
+.linkMessage A:active {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.linkMessage STRONG {
+	FONT-SIZE: 14px
+}
+.resultsform {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 0px; PADDING-LEFT: 2px; FONT-SIZE: 9px; FLOAT: left; PADDING-BOTTOM: 2px; MARGIN-LEFT: 0px; PADDING-TOP: 2px
+}
+.resultsform SELECT {
+	FONT-SIZE: 9px
+}
+.form {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.topBotton {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.topBotton STRONG {
+	COLOR: #ffffff
+}
+.commonMenuCellOver {
+	BACKGROUND-COLOR: #cddae4
+}
+.leftCommonMenu {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.leftCommonMenu A {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.leftCommonMenu A:link {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.leftCommonMenu A:visited {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.leftCommonMenu A:hover {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.leftCommonMenu A:active {
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+.leftDivisionLine {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 10px; COLOR: #999999; PADDING-TOP: 0px; HEIGHT: 1px
+}
+.contentLink {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #5e5753; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.contentLink A {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #5e5753; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.contentLink A:link {
+	TEXT-DECORATION: none
+}
+.contentLink A:visited {
+	TEXT-DECORATION: none
+}
+.contentLink A:hover {
+	TEXT-DECORATION: underline
+}
+.contentLink A:active {
+	TEXT-DECORATION: none
+}
+.consolidatedQueryActionForm {
+	DISPLAY: inline
+}
+.exchangeRateAmountCell {
+	PADDING-RIGHT: 10px; TEXT-ALIGN: right
+}
+.mainDate {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #5e5753; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.consolidatedQueryBalanceLink {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.consolidatedQueryBalanceLink A {
+	TEXT-DECORATION: none
+}
+.consolidatedQueryBalanceLink A:link {
+	TEXT-DECORATION: none
+}
+.consolidatedQueryBalanceLink A:visited {
+	COLOR: #c80000; TEXT-DECORATION: none
+}
+.consolidatedQueryBalanceLink A:hover {
+	TEXT-DECORATION: underline
+}
+.consolidatedQueryBalanceLink A:active {
+	TEXT-DECORATION: none
+}
+#transferLineSpace {
+	PADDING-BOTTOM: 7px; PADDING-TOP: 7px; HEIGHT: 35px
+}
+
+.daterror { 
+	text-align:left; 
+	font-family:Verdana, Arial, Helvetica, sans-serif; 
+	font-size:8pt; 
+	font-style:normal; 
+	font-weight: normal; 
+	color: red; 
+}
+
+.HandPointer {
+	cursor: pointer
+}
+
+#leftMenuTable {
+	color: #333333;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	font-size: 10pt;
+	margin-left: 5px		
+         
+}
+
+#leftMenuTable TH {
+	color: #333333;
+	font-size: 10pt;
+	BACKGROUND-COLOR: #EEEEEE;
+	text-align: left;
+}
+
+
+#leftMenuTable TD {
+	height: 35px;
+	border-bottom-color:#333333;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;  		
+}
+
+#leftMenuTable A {
+
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 10pt; 
+	COLOR: #333333; 
+	
+	FONT-FAMILY: Arial, sans-serif;
+	TEXT-DECORATION: none;
+}
+
+#leftMenuTable A:hover {
+	FONT-SIZE: 10pt; 
+	FONT-WEIGHT: normal;
+	COLOR: #333333; 
+	FONT-FAMILY: Arial, sans-serif; 
+	BACKGROUND-COLOR: #bfcddc; 
+	TEXT-DECORATION: none;
+
+}
+
+#sessionTable {
+	background-color: white;
+	font-style: normal;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #154a84;
+	border-style: solid;
+	border-width: 0px;
+	border-color: #7fa5cf;
+	margin: 1px;
+	font-weight: normal;
+	list-style-type: disc;
+	padding-top: 2px;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	line-height: 18px;
+	
+}
+
+#sessionTable TH {
+	background-color: #eef3f9;
+	height: 20px;
+	vertical-align: middle;	
+	color: #154a84;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #7fa5cf
+}
+
+#sessionTable TR {
+	vertical-align: middle;
+	background-color: white;
+
+}
+
+#sessionTable TD {
+	vertical-align: middle;	
+	
+}
+
+#sessionTable TD.footer {
+	background-color: #fffde6;	
+	vertical-align: middle;
+	color: #154a84;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+#sessionTable TD.daterror { 
+	text-align:left; 
+	font-family:Verdana, Arial, Helvetica, sans-serif; 
+	font-size:8pt; 
+	font-style:normal; 
+	font-weight: normal; 
+	color: red; 
+}
+
+#sessionTable .bold {
+	color: #154a84;
+	font-weight: bold;
+}
+
+#sessionTable A {
+	color: #154a84;
+	TEXT-DECORATION: none;
+}
+
+
+#sessionTable A:hover {
+	color: #154a84;
+	TEXT-DECORATION: underline;
+}
+

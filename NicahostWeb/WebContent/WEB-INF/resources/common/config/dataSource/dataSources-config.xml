@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Datasources>
+
+	<Datasource application="hotelreserve">
+		<name>dsHotel</name>
+		<jndi>java:comp/env/jdbc/wasDB2HOTEL</jndi>
+	</Datasource>
+	
+</Datasources>

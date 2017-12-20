@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Contiene los parametros globales para las tarjetas de credito
+	Henry Jiron.  Jul 12, 2005
+-->
+<init-params>
+	<init-param>
+		<param-name>Visa</param-name>
+		<param-value>Visa</param-value>
+	</init-param>
+	<init-param>
+		<param-name>MasterCard</param-name>
+		<param-value>MasterCard</param-value>
+	</init-param>
+	<init-param>
+		<param-name>Amex</param-name>
+		<param-value>Amex</param-value>
+	</init-param>
+	<init-param>
+		<param-name>Dinners</param-name>
+		<param-value>Dinners</param-value>
+	</init-param>
+
+</init-params>

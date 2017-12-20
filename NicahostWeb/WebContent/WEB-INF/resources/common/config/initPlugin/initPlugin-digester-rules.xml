@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE digester-rules PUBLIC "-//Jakarta Apache //DTD digester-rules XML V1.0//EN"
+		 "http://jakarta.apache.org/commons/digester/dtds/digester-rules.dtd">
+<!--
+Reglas de Digester para el archivo de inicialización del InitPlugin.
+jvillalobos. 17-09-2004
+-->
+<digester-rules>
+	<object-create-rule pattern="init-plugin-config" classname="com.nicahost.common.config.bean.InitPluginBean" />
+   	
+   	<pattern value="init-plugin-config/init-params">
+   		<object-create-rule classname="com.nicahost.common.config.bean.InitParameterMapBean" />
+   
+	   	<pattern value="init-param">
+			<call-method-rule methodname="addParameter" paramcount="2" />
+			<call-param-rule pattern="param-name" paramnumber="0" />
+			<call-param-rule pattern="param-value" paramnumber="1" />
+		</pattern>
+		
+		<set-next-rule methodname="setInitParameters" />
+	</pattern>
+	
+   	<pattern value="init-plugin-config/init-modules/init-module">
+   		<object-create-rule classname="com.nicahost.common.config.bean.InitModuleBean" />
+   		
+   		<pattern value="config-class">
+	   		<call-method-rule methodname="setConfigClass" paramcount="0" />
+	   		<call-method-rule methodname="setSingleton" paramcount="1" paramtypes="java.lang.Boolean" />
+	   		<call-param-rule paramnumber="0" attrname="singleton" />
+   		</pattern>
+	
+		<call-method-rule pattern="config-file" methodname="setConfigFile" paramcount="0" />
+		<call-method-rule pattern="config-rules-key" methodname="setConfigRulesKey" paramcount="0" />
+		<call-method-rule pattern="mbean-file" methodname="setMBeanFile" paramcount="0" />
+		
+		<set-next-rule methodname="addModule" />
+	</pattern>	
+	
+</digester-rules>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webappbnd:WebAppBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:webappbnd="webappbnd.xmi" xmi:id="WebAppBinding_1" virtualHostName="default_host">
+  <webapp href="WEB-INF/web.xml#WebApp"/>
+  <resRefBindings xmi:id="ResourceRefBinding_1120799707843" jndiName="jdbc/wasDB2HOTEL">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1120799707843"/>
+  </resRefBindings>
+  <resRefBindings xmi:id="ResourceRefBinding_1140281677390" jndiName="jdbc/wasCLASS">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1140281677390"/>
+  </resRefBindings>
+</webappbnd:WebAppBinding>
